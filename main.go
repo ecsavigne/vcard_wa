@@ -4,7 +4,7 @@ import (
 	"bytes"
 	"fmt"
 
-	v1 "github.com/ecsavigne/vcard/v1"
+	v1 "github.com/ecsavigne/vcard_wa"
 )
 
 func main() {
