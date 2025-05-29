@@ -1,4 +1,4 @@
-package vcard
+package main
 
 import (
 	"io"
