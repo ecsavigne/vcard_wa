@@ -7,7 +7,7 @@ defined in RFC <a>6350</a>.
     $ go mod init <yourModuleNAme>
     $ go mod tidy
 ### 1.3- Add dependencies to your project module
-    $ go get -u "github.com/ecsavigne/vcard-wa.git/v1"
+    $ go get -u "github.com/ecsavigne/vcard-wa.git"
 ### 1.4- Test code
     package main
 

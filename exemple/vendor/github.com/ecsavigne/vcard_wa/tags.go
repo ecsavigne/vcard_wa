@@ -1,4 +1,4 @@
-package main
+package vcard
 
 var tags = []string{"N", "FN", "F", "X-WA-BIZ-NAME",
 	"END", "BEGIN", "VERSION", "TEL",

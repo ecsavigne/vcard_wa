@@ -14,7 +14,7 @@ defined in RFC <a>6350</a>.
     import (
         "bytes"
         "fmt"
-        v1 "vcard-wa/v1"
+        v1 "github.com/ecsavigne/vcard_wa"
     )
 
     func main() {
