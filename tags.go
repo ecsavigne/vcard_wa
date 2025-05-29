@@ -1,4 +1,4 @@
-package v1
+package main
 
 var tags = []string{"N", "FN", "F", "X-WA-BIZ-NAME",
 	"END", "BEGIN", "VERSION", "TEL",

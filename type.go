@@ -1,3 +1,3 @@
-package v1
+package main
 
 type Record = map[string]string

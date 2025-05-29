@@ -1,4 +1,4 @@
-package v1
+package main
 
 import (
 	"io"
@@ -34,6 +34,10 @@ func (vc *VCard) createRecord() {
 	}
 }
 
+/*************  ✨ Windsurf Command ⭐  *************/
+// GetRecords returns a map of tag-value pairs from the parsed VCard.
+// @return Record a map of tag-value pairs.
+/*******  cba7243d-b484-46c0-80c9-786e2e3aa5de  *******/
 func (vc VCard) GetRecords() Record {
 	return vc.record
 }
