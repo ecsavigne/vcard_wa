@@ -1,6 +1,7 @@
 package vcard
 
 import (
+	"fmt"
 	"io"
 	"maps"
 	"regexp"
@@ -16,13 +17,20 @@ type VCard struct {
 }
 
 func ParseVCard(val io.Reader) *VCard {
+	fmt.Println("ParseVCard")
 	value, _ := io.ReadAll(val)
-	cad := string(value)
+	cad := clean(string(value))
+	fmt.Println(":\n", cad, "\n:")
 	re := regexp.MustCompile(`(?m)^(` + strings.Join(tags, "|") + `)[^:\n]*:.*`)
 	matches := re.FindAllString(cad, -1)
 	vc := &VCard{value: cad, partRecord: matches}
 	vc.createRecord()
-	return vc
+	// return vc
+	return nil
+}
+
+func clean(value string) string {
+	return strings.NewReplacer(replacer...).Replace(value)
 }
 
 func (vc *VCard) createRecord() {
