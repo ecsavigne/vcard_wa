@@ -1,14 +1,15 @@
-package example
+package main
 
 import (
 	"bytes"
 	"fmt"
 
+	// vc "github.com/ecsavigne/vcard_wa"
 	vc "github.com/ecsavigne/vcard_wa"
 )
 
 func main() {
-	text := "BEGIN:VCARD\nVERSION:3.0\nN:;PeinadoBrasil;;;\nFN:PeinadoBrasil\nX-WA-BIZ-NAME:Tiarinha Mello\nX-WA-BIZ-DESCRIPTION:Afeto | Cuidado  |Beleza | Ancestralidade | Empoderamento.\n\nNosso salão é especializado em cuidados com o cabelo crespo. \n\nSe você procura um ambiente profissional, descontraído, acolhedor, com serviço de excelência e voltado exclusivamente para pessoas negras, você está no lugar certo. 📍💁🏾‍♀️\n\nTiarinha Mello e toda sua equipe estão aguardando por você! 🤎✊🏿\nVenha viver essa experiência!!✨ ✨✨\n\nAgendamentos somente aqui no Whatsapp.😉\n\n😍Conheça o meu trabalho \ninstagram.com/tiarinhamello\nTEL;type=CELL;type=VOICE;waid=5521996500815:+55 21 99650-0815\nEND:VCARD"
+	text := "BEGIN:VCARD\nVERSION:3.0\nN:família);Agente comunitario de saúde (clinica;;;\nFN:Agente comunitario de saúde (clinica família)\nX-WA-BIZ-NAME:Agente De Saúde Leonardo\nX-WA-BIZ-DESCRIPTION:Agente de Saúde Leonardo da Equipe Herminia - Clínica da Família Erivaldo Fernandes Nóbrega \n\nHorário de funcionamento da clínica: Segunda a sexta das 07h às 18h\n\nMeu horário de atendimento é das 07 às 16h\nORG:Agente De Saúde Leonardo;\nitem2.TEL;waid=5521977178948:+55 21 97717-8948\nitem2.X-ABLabel:Celular\nEND:VCARD"
 
 	m := vc.ParseVCard(bytes.NewReader([]byte(text)))
 	fmt.Println(m.GetPartRecord())
