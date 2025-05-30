@@ -25,8 +25,7 @@ func ParseVCard(val io.Reader) *VCard {
 	matches := re.FindAllString(cad, -1)
 	vc := &VCard{value: cad, partRecord: matches}
 	vc.createRecord()
-	// return vc
-	return nil
+	return vc
 }
 
 func clean(value string) string {
